@@ -1,0 +1,28 @@
+# SDP Project - Abnormal Behavior Detection in Linux Servers
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (keep structure, ignore large files)
+data/raw/*.log
+!data/raw/.gitkeep
+
+# Results
+results/figures/*.png
+results/reports/*.pdf

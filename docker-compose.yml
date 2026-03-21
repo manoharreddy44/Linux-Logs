@@ -1,0 +1,13 @@
+services:
+  sdp-ubuntu:
+    build: .
+    container_name: sdp-linux-env
+    hostname: sdp-server
+    volumes:
+      # Mount project directory so changes sync between host and container
+      - .:/app
+      # Persist collected log data
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
+    privileged: true
