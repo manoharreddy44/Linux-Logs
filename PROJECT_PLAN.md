@@ -203,46 +203,64 @@ sdp/
 
 | Phase | Task | Duration | Status |
 |-------|------|----------|--------|
-| **Phase 1** | Environment setup & log collection | Week 1–2 | ⬜ Not Started |
-| **Phase 2** | Log parsing & feature engineering | Week 3–4 | ⬜ Not Started |
-| **Phase 3** | Model implementation & training | Week 5–7 | ⬜ Not Started |
-| **Phase 4** | Evaluation, visualization & report | Week 8–9 | ⬜ Not Started |
-| **Phase 5** | Documentation & final presentation | Week 10 | ⬜ Not Started |
+| **Phase 1** | Environment setup & log collection | Week 1–2 | ✅ Completed |
+| **Phase 2** | Log parsing & feature engineering | Week 3–4 | ✅ Completed |
+| **Phase 3** | Model implementation & training | Week 5–7 | ✅ Completed |
+| **Phase 4** | Evaluation, visualization & report | Week 8–9 | ✅ Completed |
+| **Phase 5A** | Research: Real data & methodology | Week 10 | ⬜ Not Started |
+| **Phase 5B** | Research: Model expansion & tuning | Week 11 | ⬜ Not Started |
+| **Phase 5C** | Research: Analysis & paper writing | Week 12 | ⬜ Not Started |
 
 ### Task Breakdown
 
-- [ ] **Phase 1 — Setup & Data Collection**
-  - [ ] Set up Ubuntu 24.04 LTS VM / environment
-  - [ ] Install Python 3.14+ and dependencies
-  - [ ] Configure log collection from `/var/log/`
-  - [ ] Set up Cron job for automated log collection
-  - [ ] Collect sample auth.log and syslog data
+- [x] **Phase 1 — Setup & Data Collection**
+  - [x] Set up Ubuntu 24.04 LTS via Docker
+  - [x] Install Python 3.12+ and dependencies
+  - [x] Configure log collection from `/var/log/`
+  - [x] Create sample log generator (2000 entries)
+  - [x] Collect sample auth.log data
 
-- [ ] **Phase 2 — Parsing & Feature Engineering**
-  - [ ] Build regex-based log parser
-  - [ ] Extract structured fields (timestamp, type, state, etc.)
-  - [ ] Implement time-window-based feature extraction
-  - [ ] Generate state ratio vectors and message count vectors
-  - [ ] Create labeled dataset (normal vs. abnormal)
+- [x] **Phase 2 — Parsing & Feature Engineering**
+  - [x] Build regex-based log parser (6 patterns)
+  - [x] Extract structured fields (timestamp, event type, IP, etc.)
+  - [x] Implement time-window-based feature extraction (15 features)
+  - [x] Generate event count vectors and ratio features
+  - [x] Create labeled dataset (819 samples: 649 normal, 170 abnormal)
 
-- [ ] **Phase 3 — Model Development**
-  - [ ] Implement rule-based baseline detector
-  - [ ] Train Isolation Forest model
-  - [ ] Implement PCA-based anomaly detection
-  - [ ] Train Decision Tree classifier
-  - [ ] Hyperparameter tuning for all models
+- [x] **Phase 3 — Model Development**
+  - [x] Implement rule-based baseline detector (F1=0.99)
+  - [x] Train Isolation Forest model (F1=0.22)
+  - [x] Implement PCA-based anomaly detection (F1=0.00)
+  - [x] Train Decision Tree classifier (F1=1.00)
+  - [x] Compare all models with unified evaluator
 
-- [ ] **Phase 4 — Evaluation & Visualization**
-  - [ ] Compute precision, recall, F1-score for each model
-  - [ ] Generate confusion matrices
-  - [ ] Create comparative performance charts
-  - [ ] Test under simulated attack scenarios
-  - [ ] Document findings in evaluation report
+- [x] **Phase 4 — Evaluation & Visualization**
+  - [x] Compute precision, recall, F1-score for each model
+  - [x] Generate confusion matrices and ROC curves
+  - [x] Create comparative performance charts (15 visualizations)
+  - [x] Test under 6 simulated attack scenarios
+  - [x] Generate final evaluation report
 
-- [ ] **Phase 5 — Documentation**
-  - [ ] Write final project report
-  - [ ] Prepare presentation slides
-  - [ ] Code documentation and cleanup
+- [ ] **Phase 5A — Research: Real Data & Methodology**
+  - [ ] Download HDFS dataset from LogHub (real-world logs)
+  - [ ] Adapt log parser for HDFS log format
+  - [ ] Implement Stratified K-Fold Cross Validation (k=10)
+  - [ ] Add multi-class labeling (brute_force, credential_stuffing, etc.)
+  - [ ] Compare synthetic vs. real data results
+
+- [ ] **Phase 5B — Research: Model Expansion & Tuning**
+  - [ ] Implement Random Forest classifier
+  - [ ] Implement XGBoost (gradient boosting)
+  - [ ] Implement One-Class SVM
+  - [ ] Implement MLP Neural Network
+  - [ ] Hyperparameter tuning with GridSearchCV for all models
+
+- [ ] **Phase 5C — Research: Analysis & Paper Writing**
+  - [ ] Run feature ablation study
+  - [ ] Perform statistical significance testing (paired t-tests)
+  - [ ] Write Literature Review / Related Work section
+  - [ ] Write IEEE-format research paper (8–10 pages)
+  - [ ] Prepare final review presentation
 
 ---
 
