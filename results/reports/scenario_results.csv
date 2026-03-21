@@ -1,0 +1,7 @@
+scenario,expected,baseline,isolation_forest,pca_detector,decision_tree
+Brute Force SSH Attack,abnormal,abnormal,abnormal,abnormal,abnormal
+Credential Stuffing,abnormal,abnormal,abnormal,abnormal,normal
+Break-in Attempt,abnormal,abnormal,abnormal,abnormal,abnormal
+Normal Work Activity,normal,normal,abnormal,abnormal,normal
+Night-time Attack,abnormal,abnormal,abnormal,abnormal,abnormal
+Privilege Escalation,normal,normal,abnormal,abnormal,normal
