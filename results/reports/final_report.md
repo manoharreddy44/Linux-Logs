@@ -2,7 +2,7 @@
 
 > **Project:** Detection of Abnormal Behavior in Linux Servers Using Machine Learning
 >
-> **Generated:** 21 March 2026, 04:12
+> **Generated:** 27 March 2026, 02:26
 >
 > **Team:** Aavula Ravi Kumar (22BCE20046) · Manohar Reddy K (22BCE9601) · Rahul Kumar (22BCE7182)
 
@@ -11,8 +11,8 @@
 ## 1. Executive Summary
 
 This report presents the evaluation of four anomaly detection models tested against
-Linux server log data. The system processed **819 feature samples**
-(649 normal, 170 abnormal) generated from 2000 synthetic auth.log entries.
+Linux server log data. The system processed **822 feature samples**
+(650 normal, 172 abnormal) generated from 2000 synthetic auth.log entries.
 
 **Best performing model:** Decision Tree (F1-Score: 1.0000)
 
@@ -23,9 +23,9 @@ Linux server log data. The system processed **819 feature samples**
 | Metric | Value |
 |--------|-------|
 | Raw log entries | 2,000 |
-| Feature samples | 819 |
-| Normal samples | 649 (79.2%) |
-| Abnormal samples | 170 (20.8%) |
+| Feature samples | 822 |
+| Normal samples | 650 (79.1%) |
+| Abnormal samples | 172 (20.9%) |
 | Features per sample | 15 |
 | Time window | 60 minutes |
 | Source IPs | 7 |
@@ -36,9 +36,9 @@ Linux server log data. The system processed **819 feature samples**
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|--------|----------|
-| Rule-Based Baseline | 0.9951 | 0.9770 | 1.0000 | 0.9884 |
-| Isolation Forest | 0.6951 | 0.2333 | 0.2059 | 0.2188 |
-| PCA Anomaly Detector | 0.7256 | 0.0000 | 0.0000 | 0.0000 |
+| Rule-Based Baseline | 0.9927 | 0.9663 | 1.0000 | 0.9829 |
+| Isolation Forest | 0.7455 | 0.4146 | 0.4857 | 0.4474 |
+| PCA Anomaly Detector | 0.7697 | 0.2000 | 0.0286 | 0.0500 |
 | Decision Tree 🏆 | 1.0000 | 1.0000 | 1.0000 | 1.0000 |
 
 ### Key Findings
